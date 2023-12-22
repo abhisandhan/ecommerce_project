@@ -8,7 +8,7 @@ const initialState = {
 
 
 export const incrementAsync = createAsyncThunk(
-  'counter/fetchCount',
+  'cart/fetchCount',
   async (amount) => {
     const response = await fetchCount(amount);
     // The value we return becomes the `fulfilled` action payload
@@ -39,7 +39,7 @@ export const counterSlice = createSlice({
 
 export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 
-export const selectCount = (state) => state.counter.value;
+export const selectCount = (state) => state.cart.value;
 
 
 export default counterSlice.reducer;

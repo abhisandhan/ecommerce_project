@@ -8,7 +8,6 @@ import Checkout from './pages/Checkout';
 import ProductDetailsPage from './pages/ProductDetailsPage';
 
 
-import { createRoot } from "react-dom/client";
 import {
   createBrowserRouter,
   RouterProvider,

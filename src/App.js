@@ -6,6 +6,7 @@ import SignupPage from './pages/SignupPage';
 import CartPage from './pages/CartPage';
 import Checkout from './pages/Checkout';
 import ProductDetailsPage from './pages/ProductDetailsPage';
+import Protected from './features/product/components/Protected';
 
 
 import {
@@ -18,7 +19,7 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home></Home>,
+    element: <Protected><Home></Home></Protected>,
   },
   {
     path: "/login",
@@ -30,15 +31,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/cart",
-    element: <CartPage></CartPage>,
+    element: <Protected><CartPage></CartPage></Protected>,
   },
   {
     path: "/checkout",
-    element: <Checkout></Checkout>,
+    element: <Protected><Checkout></Checkout></Protected>,
   },
   {
     path: "/product-details/:id",
-    element: <ProductDetailsPage></ProductDetailsPage>,
+    element: <Protected><ProductDetailsPage></ProductDetailsPage></Protected>,
   },
   
 ]);

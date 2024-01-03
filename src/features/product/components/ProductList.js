@@ -436,7 +436,6 @@ function Pagination({page, setPage, handlePage, totalItems}) {
             .map((el,index) => (
                 <div
                   onClick={e=>handlePage(index+1)}
-                  href="#"
                   aria-current="page"
                   className={`relative cursor-pointer z-10 inline-flex items-center 
                   ${index+1===page? 'bg-indigo-600 text-white':'text-gray-400'} 

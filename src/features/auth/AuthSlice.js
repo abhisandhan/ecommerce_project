@@ -42,18 +42,18 @@ export const counterSlice = createSlice({
       })
       .addCase(createUserAsync.fulfilled, (state, action) => {
         state.status = 'idle';
-        state.loggedInUser += action.payload;
+        state.loggedInUser = action.payload;
       })
       .addCase(checkUserAsync.pending, (state) => {
         state.status = 'loading';
       })
       .addCase(checkUserAsync.fulfilled, (state, action) => {
         state.status = 'idle';
-        state.loggedInUser += action.payload;
+        state.loggedInUser = action.payload;
       })
       .addCase(checkUserAsync.rejected, (state, action) => {
         state.status = 'idle';
-        state.error += action.error;
+        state.error = action.error;
       });
   },
 });

@@ -17,6 +17,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import PageNotFound from './pages/404';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,12 @@ const router = createBrowserRouter([
   {
     path: "/product-details/:id",
     element: <Protected><ProductDetailsPage></ProductDetailsPage></Protected>,
+  },
+  {
+    path: "*",
+    element: (
+    <PageNotFound></PageNotFound>
+    )
   },
   
 ]);
